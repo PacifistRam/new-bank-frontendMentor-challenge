@@ -1,0 +1,33 @@
+---
+const posts = [
+  {
+    title: "Hydrogen VS Electric Cars",
+    content: "Will hydrogen-fueled cars ever catch up to EVs?",
+  },
+  {
+    title: "The Downside of AI Artistry",
+    content: "What are the possible adverse effects os on-demand AI image generation?",
+  },
+  {
+    title: "Is VC Funding Drying Up?",
+    content: "Private funding by VC firms is down 50% YOY. We takea look at what that means",
+  },
+];
+
+
+---
+
+<section class="bg-[#00001a] text-white pt-7 px-5 mb-11">
+    <h2 class="text-amber-300 text-3xl font-semibold mb-5 ">New</h2>
+    <div class="">
+        {
+           posts.map((post,index) => 
+           (
+           <div class={`py-2  mb-3 ${index !== posts.length -1 ? "border-b border-slate-300" : "" }`}>
+                <h3 class="text-2xl mb-3 font-bold">{post.title}</h3>
+                <p class="text-sm text-slate-300 font-light pb-8 ">{post.content}</p>
+            </div>)
+            )
+        }
+    </div>
+</section>

@@ -1,0 +1,26 @@
+---
+// style import
+import '../styles/global.css'
+const siteData ={
+    title: "News Home Page FM",
+    description: "FrontendMentor homepage challenge",
+    favicon:"/assets/images/favicon-32x32.png"
+}
+const {title = siteData.title,description = siteData.description} = Astro.props
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href={siteData.favicon} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+		<title>{title}</title>
+	</head>
+	<body>
+        <slot />
+	</body>
+</html>

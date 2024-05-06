@@ -1,0 +1,47 @@
+---
+const CardPostData = [
+    {
+        image:{
+            url: "/assets/images/image-retro-pcs.jpg",
+            alt: "retro pc's",
+        },
+        title: "Reviving Retro PCs",
+        content: "What happens when old PCs are given modern upgrades?"
+    },
+    {
+        image:{
+            url: "/assets/images/image-top-laptops.jpg",
+            alt: " laptop image",
+        },
+        title: "Top 10 Laptops of 2022",
+        content: "Our best pics for various needs and budgets."
+    },
+    {
+        image:{
+            url: "/assets/images/image-gaming-growth.jpg",
+            alt: "gaming console",
+        },
+        title: "The Growth of Gaming",
+        content: "How the pandemic has sparked fresh opportunities."
+    },
+]
+---
+
+<section class="px-5 grid grid-cols-1 gap-7">
+   
+        {
+            CardPostData.map((card,index) => 
+            (<div class="flex gap-6 flex-1 ">
+                    <div>
+                        <img class="" src={card.image.url} alt={card.image.alt}>
+                    </div>
+                    <div>
+                        <span>0{index + 1}</span>
+                        <h3>{card.title}</h3>
+                        <p>{card.content}</p>
+                    </div>
+            </div>)
+            )
+        }
+    
+</section>
