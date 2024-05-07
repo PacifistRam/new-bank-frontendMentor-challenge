@@ -27,18 +27,18 @@ const CardPostData = [
 ]
 ---
 
-<section class="px-5 grid grid-cols-1 gap-7">
+<section class="px-5 grid grid-cols-1 gap-7 sm:grid-cols-3 sm:px-0 sm:mt-10">
    
         {
             CardPostData.map((card,index) => 
-            (<div class="flex gap-6 flex-1 ">
-                    <div>
-                        <img class="" src={card.image.url} alt={card.image.alt}>
+            (<div class="flex gap-6 ">
+                    <div class="flex-shrink-0 w-1/4">
+                        <img class="w-full" src={card.image.url} alt={card.image.alt}>
                     </div>
                     <div>
-                        <span>0{index + 1}</span>
-                        <h3>{card.title}</h3>
-                        <p>{card.content}</p>
+                        <span class="text-slate-400 text-2xl font-bold tracking-widest block mb-3"  >0{index + 1}</span>
+                        <h3 class="text-[#00001a] font-extrabold text-xl opacity-80 mb-3">{card.title}</h3>
+                        <p class="text-slate-600 text-base">{card.content}</p>
                     </div>
             </div>)
             )

@@ -4,24 +4,29 @@ import PostList from "./PostList.astro"
 import CardPost from "./CardPost.astro"
 ---
 
-<section class="py-6 px-3 mb-4 grid grid-cols-1 gap-5">
-    <picture>
-        <source srcset="/assets/images/image-web-3-desktop.jpg" media="(min-width: 400px)">
-        <source srcset="/assets/images/image-web-3-mobile.jpg">
-        <img src="" alt="">
-    </picture>
-    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl grid sm:block sm:text-center ">
-        <span>The Bright</span>
-        <span>Future of Web</span>
-        <span>3.0?</span>
-    </h1>
-    <p class="text-sm text-slate-600" >We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
-
-    <button class="px-9 py-4 w-max bg-[#f15e50] text-white uppercase tracking-widest text-sm cursor-pointer hover:bg-red-600 transition duration-150 ease-in">
-        Read More
-    </button>
+<div class=" sm:grid sm:grid-cols-3 sm:gap-8 sm:mb-5 ">
+    <section class="py-6 px-3 mb-4 grid grid-cols-1 gap-5 sm:col-span-2 sm:px-0 sm:py-0 sm:mb-0 ">
+        <picture>
+            <source srcset="/assets/images/image-web-3-desktop.jpg" media="(min-width: 400px)">
+            <source srcset="/assets/images/image-web-3-mobile.jpg">
+            <img src="" alt="">
+        </picture>
+        <div class="sm:grid grid-cols-2 gap-10">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl grid sm:gap-2   ">
+                <span>The Bright</span>
+                <span>Future of Web</span>
+                <span>3.0?</span>
+            </h1>
+            <div>
+                <p class="text-sm text-slate-600 mb-8" >We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+                <button class="px-9 py-4 w-max bg-[#f15e50] text-white uppercase tracking-widest text-sm cursor-pointer hover:bg-red-600 transition duration-150 ease-in">
+                    Read More
+                </button>
+            </div>
+        </div>
     
-</section>
+    </section>
+    <PostList  />
+</div>
 
-<PostList />
 <CardPost />

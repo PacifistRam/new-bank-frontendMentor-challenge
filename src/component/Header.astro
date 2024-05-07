@@ -1,8 +1,43 @@
 ---
-import {Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
+
+const siteNav = [
+  {
+    page: "Home",
+    url: "#",
+  },
+  {
+    page: "New",
+    url: "#",
+  },
+  {
+    page: "Popular",
+    url: "#",
+  },
+  {
+    page: "Trending",
+    url: "#",
+  },
+  {
+    page: "Categories",
+    url: "#",
+  },
+];
 ---
 
-<header class="flex justify-between items-center py-6 px-3 mb-4">
-    <img src="/assets/images/logo.svg" width="30" alt="site logo">
-    <img src="/assets/images/icon-menu.svg" alt=" nav menu">
+<header class="flex justify-between items-center py-6 px-3 mb-4 sm:mt-6 sm:mb-1">
+  <img
+    class="w-[40px] sm:w-[60px]"
+    src="/assets/images/logo.svg"
+    alt="site logo"
+  />
+  <nav>
+    <ul class=" sm:flex gap-7 text-sm text-slate-700">
+        {
+            siteNav.map(site => (<li><a href={site.url}>{site.page}</a></li>)
+        )
+        }
+    </ul>
+  </nav>
+  <img class="sm:hidden" src="/assets/images/icon-menu.svg" alt=" nav menu" />
 </header>
